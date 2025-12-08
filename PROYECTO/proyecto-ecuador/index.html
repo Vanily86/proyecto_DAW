@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Turismo Ecuador</title>
+    <link rel="stylesheet" href="css/estyles.css">
+</head>
+<body>
+    <header>
+        <h1>Turismo en Ecuador</h1>
+        <nav>
+            <a href="index.html" class="activo">Inicio</a>
+            <a href="regiones.html">Regiones</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        <button id="toggleTheme">🌙</button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Explora Ecuador por Regiones</h2>
+            <p>Descubre la Costa, Sierra, Oriente y Región Insular de este maravilloso país.</p>
+        </section>
+
+        <section class="galeria">
+            <h3>Galería</h3>
+            <div class="slideshow">
+                <button class="btn-slide" id="prev">‹</button>
+                <!-- Solo un <img>, el JS cambiará la imagen -->
+                <img src="img/costa.jpg" alt="Costa del Ecuador" id="slideImage">
+                <button class="btn-slide" id="next">›</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        © 2025 Turismo del Ecuador
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

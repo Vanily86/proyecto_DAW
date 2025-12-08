@@ -1,0 +1,275 @@
+/* ===============================
+   Variables de colores (bandera Ecuador)
+================================= */
+:root {
+    --amarillo: #f4d03f;
+    --azul: #0050a6;
+    --rojo: #c62828;
+    --text: #1a1a1a;
+}
+
+/* ===============================
+   Estilos generales
+================================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ===============================
+   Header y navegación
+================================= */
+header {
+    background: var(--azul);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between; /* mantiene espacio entre título y nav */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Mantener el título a la izquierda */
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 1.8em;
+}
+
+/* Nav alineado a la derecha */
+nav {
+    margin-left: auto; /* empuja nav hacia la derecha */
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: border-bottom 0.3s;
+}
+
+nav a.activo {
+    border-bottom: 3px solid var(--amarillo);
+}
+
+/* Botón de cambio de tema se mantiene a la derecha del nav */
+#toggleTheme {
+    background: var(--amarillo);
+    border: 2px solid var(--rojo);
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 20px; /* espacio desde la navegación */
+}
+
+/* ===============================
+   Main
+================================= */
+main {
+    flex: 1;
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ===============================
+   Hero / sección de bienvenida
+================================= */
+section.hero {
+    margin-bottom: 40px;
+}
+
+section.hero h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: var(--rojo);
+}
+
+section.hero p {
+    font-size: 1.2em;
+}
+
+/* ===============================
+   Slideshow / Galería interactiva
+================================= */
+section.galeria {
+    margin-bottom: 40px;
+}
+
+.slideshow {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideshow img {
+    width: 80%;
+    max-width: 800px;
+    border: 5px solid var(--amarillo);
+    border-radius: 12px;
+    transition: 0.5s;
+}
+
+.btn-slide {
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    background: var(--azul);
+    color: white;
+    border: 2px solid var(--rojo);
+    border-radius: 8px;
+    font-size: 1.2em;
+    transition: transform 0.2s;
+}
+
+.btn-slide:hover {
+    transform: scale(1.1);
+}
+
+/* ===============================
+   Sección Regiones
+================================= */
+section.regiones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: left;
+}
+
+section.regiones article {
+    flex: 1 1 200px;
+    border-left: 6px solid var(--rojo);
+    padding: 15px;
+    border-radius: 8px;
+    background: #fdfdfd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section.regiones article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ===============================
+   Formulario de Contacto
+================================= */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #fdfdfd;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-5px);
+}
+
+form label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--azul);
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--azul);
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: var(--rojo);
+    box-shadow: 0 0 10px rgba(198, 40, 40, 0.3);
+    outline: none;
+}
+
+form button {
+    margin-top: 25px;
+    padding: 12px 25px;
+    background: var(--rojo);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    align-self: center;
+}
+
+form button:hover {
+    background: #a71c1c;
+    transform: scale(1.05);
+}
+
+#formStatus {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.05em;
+}
+
+/* ===============================
+   Footer
+================================= */
+footer {
+    background: var(--azul);
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* ===============================
+   Responsivo
+================================= */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .slideshow img {
+        width: 95%;
+    }
+
+    section.regiones {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px){
+    form {
+        padding: 20px;
+        margin: 20px;
+    }
+}

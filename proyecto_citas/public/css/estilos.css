@@ -1,0 +1,113 @@
+
+:root {
+    --primary-color: #0f4c81;    
+    --secondary-color: #2a9d8f; 
+    --danger-color: #e63946;     
+    --warning-color: #ffb703;    
+    --light-bg: #f1f5f9;
+    --text-color: #334155;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tr:hover {
+    background-color: #f8fafc;
+}
+
+.btn {
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-success { background-color: var(--secondary-color); color: white; }
+.btn-primary { background-color: var(--primary-color); color: white; }
+.btn-warning { background-color: var(--warning-color); color: white; }
+.btn-danger { background-color: var(--danger-color); color: white; }
+
+.btn:hover {
+    filter: brightness(90%);
+    transform: translateY(-1px);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+.error-box {
+    background-color: #fee2e2;
+    color: var(--danger-color);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid var(--danger-color);
+}

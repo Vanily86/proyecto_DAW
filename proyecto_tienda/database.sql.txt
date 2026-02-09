@@ -1,0 +1,21 @@
+-- 1. Crear la base de datos
+CREATE DATABASE IF NOT EXISTS tienda;
+USE tienda;
+
+-- 2. Crear la tabla productos
+CREATE TABLE IF NOT EXISTS productos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    descripcion TEXT,
+    precio DECIMAL(10, 2) NOT NULL,
+    stock INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 3. Insertar 5 productos de ejemplo
+INSERT INTO productos (nombre, descripcion, precio, stock) VALUES
+('Laptop Gamer', 'Procesador i7, 16GB RAM, RTX 3060', 1200.50, 10),
+('Mouse Inalámbrico', 'Ergonómico con sensor óptico', 25.00, 50),
+('Teclado Mecánico', 'RGB con switches rojos', 85.99, 15),
+('Monitor 24"', 'FHD 144Hz para juegos', 199.00, 8),
+('Auriculares Pro', 'Cancelación de ruido activa', 150.00, 20);
